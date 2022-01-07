@@ -85,18 +85,4 @@ function calculateBMI() {
   Your Status = ${bmiStatus}
   Gender = ${gender}
   `);
-
-	// if (bmi >= 19 && bmi <= 24 && age >= 19 && age <= 24) {
-	// 	alert("You are Normal Weight");
-	// } else if (bmi >= 20 && bmi <= 25 && age >= 25 && age <= 34) {
-	// 	alert("You are Normal Weight");
-	// } else if (bmi >= 21 && bmi <= 26 && age >= 35 && age <= 44) {
-	// 	alert("You are Normal Weight");
-	// } else if (bmi >= 22 && bmi <= 27 && age >= 45 && age <= 54) {
-	// 	alert("You are Normal Weight");
-	// } else if (bmi >= 23 && bmi <= 28 && age >= 55 && age <= 64) {
-	// 	alert("You are Normal Weight");
-	// } else {
-	// 	alert("You are NOOOOT !!!! Normal Weight");
-	// }
 }
