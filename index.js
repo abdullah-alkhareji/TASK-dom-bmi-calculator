@@ -8,25 +8,82 @@ function calculateBMI() {
 	console.table({ age, weight, height, male, female });
 
 	// You are going to write the code here before the curly braces 👇🏻
-	// let height2 = height / 100;
-	// let height3 = height2 ** 2;
+
 	const bmi = weight / (height / 100) ** 2;
 
 	let bmiStatus;
 
-	if (bmi < 18.5) {
-		bmiStatus = "Underweight";
-	} else if (bmi >= 18.5 && bmi <= 24.9) {
-		bmiStatus = "HealthyWeight";
-	} else if (bmi >= 25 && bmi <= 29.9) {
-		bmiStatus = "Overweight";
+	if (age <= 24) {
+		if (bmi < 18.5) {
+			bmiStatus = "Underweight";
+		} else if (bmi <= 24.9) {
+			bmiStatus = "HealthyWeight";
+		} else if (bmi <= 29.9) {
+			bmiStatus = "Overweight";
+		} else {
+			bmiStatus = "Obesity";
+		}
+	} else if (age <= 34) {
+		if (bmi < 20.5) {
+			bmiStatus = "Underweight";
+		} else if (bmi <= 25.9) {
+			bmiStatus = "HealthyWeight";
+		} else if (bmi <= 31.9) {
+			bmiStatus = "Overweight";
+		} else {
+			bmiStatus = "Obesity";
+		}
+	} else if (age <= 44) {
+		if (bmi < 21.5) {
+			bmiStatus = "Underweight";
+		} else if (bmi <= 26.9) {
+			bmiStatus = "HealthyWeight";
+		} else if (bmi <= 32.9) {
+			bmiStatus = "Overweight";
+		} else {
+			bmiStatus = "Obesity";
+		}
+	} else if (age <= 54) {
+		if (bmi < 22.5) {
+			bmiStatus = "Underweight";
+		} else if (bmi <= 27.9) {
+			bmiStatus = "HealthyWeight";
+		} else if (bmi <= 33.9) {
+			bmiStatus = "Overweight";
+		} else {
+			bmiStatus = "Obesity";
+		}
+	} else if (age <= 64) {
+		if (bmi < 23.5) {
+			bmiStatus = "Underweight";
+		} else if (bmi <= 28.9) {
+			bmiStatus = "HealthyWeight";
+		} else if (bmi <= 34.9) {
+			bmiStatus = "Overweight";
+		} else {
+			bmiStatus = "Obesity";
+		}
+	} else if (age >= 65) {
+		if (bmi < 24.5) {
+			bmiStatus = "Underweight";
+		} else if (bmi <= 29.9) {
+			bmiStatus = "HealthyWeight";
+		} else if (bmi <= 35.9) {
+			bmiStatus = "Overweight";
+		} else {
+			bmiStatus = "Obesity";
+		}
 	} else {
-		bmiStatus = "Obesity";
+		bmiStatus = "You need to put your age to view the status!";
 	}
 
+	const gender = male ? "Male" : "Female";
+
+	const newBmi = bmi.toFixed(2);
 	alert(`
-  BMI = ${bmi}
+  BMI = ${newBmi}
   Your Status = ${bmiStatus}
+  Gender = ${gender}
   `);
 
 	// if (bmi >= 19 && bmi <= 24 && age >= 19 && age <= 24) {
